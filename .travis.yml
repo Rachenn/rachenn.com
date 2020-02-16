@@ -2,17 +2,18 @@ language: node_js
 node_js:
 - 7
 - 8
-- "0.10"
+- 10
+cache:
+- node_modules
 before_install:
 - npm install -g npm
 script:
 - npm install
 - npm run pretest
-
 deploy:
   provider: heroku
-  api_key: 2ad11162-c630-4afb-ab20-fdd944659d19
-    secure: NUuj5iAthljlxsLyPmeB1y4SYgOYtl5coETsyBjkFMr++WAWm27Vvco1Xm1+uEyzkNbuLAvNzECN65OqCkF4pIvI4bWFL3+Nw7V3Tf89Z81S+0vmibMz/KY8/N4jS5C6W535SZKjuhw6XVnYivKl7Cg02AB7lk7C1oTVd3dA4BmpjvBUYyE18otv5tZbWrjdFnISzJsJjiloujTsCcezmIyPQN9mAu0bIvhl93jxcr/066+SvxLGb19evFVUmHFCSSkH0TJ4Szk+IrOpBTM/iALr1oOZKTtN1oP6BOdrutDKcIxQnVnwPcxUNjs3ZOc5LjbiJ0kJBzLEMmJ7f77nPt0HEmIcoRHMlqj5SdqDaMHlhxI9+R4QPI4htQLJBsQOT2S6UeFrm1nn+XZHlE9S6GMnSElVas+0yxmZTSmST4KRBGpUTdBk7HAVPtZ6m3lA/sRgC4T8PdQAZzbu8zx306AI+tcBolSUupqUL6USr60XeHNmE9vugl9fJ34wTt7Jpz6XGZvv5yTV1AcOd1iFU4GPJi7spDcT6ci75fF4eqHR61L5LTSHWNlNptN03EFPjhn8eVYnOCFwDhQqhd4gFhGBgsf4TbaRX9AHCwMNmvhGugupwIYLBC329MVQiaU7Waz3soE9ofla1Cg9n3V8FVq8AgVCfBHyCBoqtLZbeA4=
-  app: "rachenn"
+  api_key:
+    secure: slK0Lqf5xUtB39I7Y/DdtM0LROi5W42yO/p4EKXCybtvwRIC7Ip0M3M9n15zfjfD+8jSAoy63dyzRW2GWkmxXVIP+tGl2zjUD0PgGWW1u8Vm9NzycHh8Rp9c22I0uzvFQzZwr8rx4+GnYxF/b23MUqaJ6DeZbpZUO0MXOPPqvnM1E32b1fGkukiZ/Qs+yLxKmx0Z3MHJthTHrGUaIr7px9ZF0Me7XLQaoKHnNIOaMuruskEUb3XBSTEHZE2SHgtNI9ZoeOb9WLQZv+O50ptxXhYvAiuHwxEOe7qNk+GqewiUPwmt1ZfdW/3Ylegz86TNbN+ienBlfWLcyucD/l+7nU09EZsoKS5LCxrutiyOBcVBQpbSGrY4h/6LUvTtJyYJqzcvK0PH+tB4KmC5HUNaazb69ohy62kSedk/AcQCHjjDZYEtZnsKv5RCvKZyW1mcZcUMWizM0A0JD3pnFA/BflZ0WyPj0+mTIfxiyrzCaNlnf8y82Dh2dnqjrsUABN/5KcdY2oqX6xYWMEGV5DVwGPQz5H2Pv9trsas61BjnYIytBJm2fs4HDZ7zdDfmIu0ZjoImBMdCa3Qg7QL7xi7FfbmKUmlLS1bSYhF3IwLPCRBHxXMmhmwNuekMEBGxIaR7kJgKy3Ji1vsHhJID9d83e1LKfNqH7nX5YUyx6ixhcKM=
+  app: rachenn
   on:
     repo: rachenn/rachenn.com
