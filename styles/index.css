@@ -1,0 +1,137 @@
+body {
+	background-color: #323045;
+	max-width: 100%;
+	transition: 0.5s;
+}
+
+.jumbotron {
+	background: url(https://images.unsplash.com/photo-1439397629354-e2e3dea8f6f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+	background-size: cover;
+	padding: 9rem;
+	height: 50%;
+	width: 100%;
+    display: block;
+	background-position: center;
+	background-color: #323045;
+
+
+	font-family: 'Teko', sans-serif;
+	color: white;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	text-align: center;	
+}
+
+#header h1 {
+	font-size: 5em;
+	/* font-size:6vw; */
+
+}
+
+#header h3, #header hr {
+	font-size: 2rem;
+	padding-top: 0%;
+	/* font-size:2vw; */
+}
+
+hr {
+	/* width: 20em; */
+	width: 25vw;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Adjusts the link clicking */
+h2::before {
+	display: block; 
+	content: " "; 
+	margin-top: -10rem; 
+	height: 10rem; 
+	visibility: hidden; 
+	pointer-events: none;
+}
+
+#profilePic {
+	border-radius: 100%;
+	width: 20rem;
+	/* margin-left: 3rem; */
+	align-items: center;
+}
+
+.container {
+	border: 1px solid white;
+	color: white;
+	z-index: -1;
+	max-width: 95%;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	font-size: 1em;
+}
+
+.container h2 {
+	text-align: center;
+	padding: 1rem auto;
+	font-size: 4em;
+}
+
+footer {
+	position: sticky;
+	text-decoration: none;
+}
+
+.workExamples img{
+	width: 25em;
+	margin-left: 3em;
+}
+
+/* Mobile screen */
+@media screen and (max-width : 550px) {
+	.jumbotron{
+		text-align: center;
+		padding: 5em 0 0 0 ;
+	}
+	.jumbotron h1{
+		padding-left: 0;
+	}
+
+	hr{
+		width: 10em;
+	}
+
+	#profilePic {
+		width: 10rem;
+		align-items: center;
+	}
+}
+
+/* NAVBAR */
+nav {
+	background-color: #323045;
+}
+
+.fixed-top {
+	padding-bottom: 0;
+}
+
+.navbar .collapse .navbar-nav>li>a{
+	color: white;
+}
+
+.navbar .navbar-brand {
+	color: white;
+}
+
+
+nav a:hover {
+	background-color: white;
+	color: #323045;
+}
+
+.socialDiv li {
+	float: right;
+}
+
+
+footer a:hover {
+	background-color: initial;
+	color: white;
+}
