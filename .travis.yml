@@ -6,10 +6,10 @@ node_js:
 cache:
 - node_modules
 before_install:
-- npm install -g npm
+# - npm install -g npm
 script:
-- npm install
-- npm run package.json
+# - npm install
+# - npm run package.json
 deploy:
   provider: heroku
   api_key:
