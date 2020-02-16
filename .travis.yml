@@ -8,7 +8,7 @@ cache:
 before_install:
 # - npm install -g npm
 script:
-# - npm install
+- npm install
 # - npm run package.json
 deploy:
   provider: heroku
