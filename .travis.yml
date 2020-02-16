@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - 7
 - 8
-- 10
+- "0.10"
 before_install:
 - npm install -g npm
 script:
@@ -11,7 +11,7 @@ script:
 
 deploy:
   provider: heroku
-  api_key:
+  api_key: 2ad11162-c630-4afb-ab20-fdd944659d19
     secure: NUuj5iAthljlxsLyPmeB1y4SYgOYtl5coETsyBjkFMr++WAWm27Vvco1Xm1+uEyzkNbuLAvNzECN65OqCkF4pIvI4bWFL3+Nw7V3Tf89Z81S+0vmibMz/KY8/N4jS5C6W535SZKjuhw6XVnYivKl7Cg02AB7lk7C1oTVd3dA4BmpjvBUYyE18otv5tZbWrjdFnISzJsJjiloujTsCcezmIyPQN9mAu0bIvhl93jxcr/066+SvxLGb19evFVUmHFCSSkH0TJ4Szk+IrOpBTM/iALr1oOZKTtN1oP6BOdrutDKcIxQnVnwPcxUNjs3ZOc5LjbiJ0kJBzLEMmJ7f77nPt0HEmIcoRHMlqj5SdqDaMHlhxI9+R4QPI4htQLJBsQOT2S6UeFrm1nn+XZHlE9S6GMnSElVas+0yxmZTSmST4KRBGpUTdBk7HAVPtZ6m3lA/sRgC4T8PdQAZzbu8zx306AI+tcBolSUupqUL6USr60XeHNmE9vugl9fJ34wTt7Jpz6XGZvv5yTV1AcOd1iFU4GPJi7spDcT6ci75fF4eqHR61L5LTSHWNlNptN03EFPjhn8eVYnOCFwDhQqhd4gFhGBgsf4TbaRX9AHCwMNmvhGugupwIYLBC329MVQiaU7Waz3soE9ofla1Cg9n3V8FVq8AgVCfBHyCBoqtLZbeA4=
   app: "rachenn"
   on:
