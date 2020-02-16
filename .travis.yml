@@ -9,7 +9,7 @@ before_install:
 - npm install -g npm
 script:
 - npm install
-- npm run pretest
+- npm run package.json
 deploy:
   provider: heroku
   api_key:
