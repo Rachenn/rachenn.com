@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Rachenn/rachenn.com/issues"
   },
-  "homepage": "https://github.com/Rachenn/rachenn.com#readme"
+  "homepage": "https://github.com/Rachenn/rachenn.com#readme",
+  "dependencies": {
+    "nodejs": "0.0.0"
+  }
 }
