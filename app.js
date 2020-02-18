@@ -7,6 +7,7 @@ const port = process.env.PORT || 9000;
 app.set("view engine", "ejs");
 app.use(express.static('styles'));
 app.use(express.static('script'));
+app.use(express.static("public"));
 
 app.get("/", function(req, res){
   res.render('index');
