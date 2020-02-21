@@ -23,18 +23,14 @@ body {
 
 #header h1 {
 	font-size: 5em;
-	/* font-size:6vw; */
-
 }
 
 #header h3, #header hr {
 	font-size: 2rem;
 	padding-top: 0%;
-	/* font-size:2vw; */
 }
 
 hr {
-	/* width: 20em; */
 	width: 25vw;
 	border-top: 1px solid #f8f8f8;
 	border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -107,7 +103,6 @@ footer {
 	#profilePic {
 		width: 10rem;
 		margin-left: 25%;
-		/* align-items: center; */
 	}
 }
 
