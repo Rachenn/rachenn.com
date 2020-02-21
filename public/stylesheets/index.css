@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: #323045;
 	max-width: 100%;
@@ -71,14 +75,21 @@ h2::before {
 	font-size: 4em;
 }
 
+.portfolio {
+	text-align: center;
+}
+
+img{ 
+	width: 100%
+}
+
+.col {
+	max-width: 100%;
+}
+
 footer {
 	position: sticky;
 	text-decoration: none;
-}
-
-.workExamples img{
-	width: 25em;
-	margin-left: 3em;
 }
 
 #contactContent{
@@ -123,7 +134,6 @@ nav {
 	color: white;
 }
 
-
 nav a:hover {
 	background-color: white;
 	color: #323045;
@@ -138,3 +148,4 @@ footer a:hover {
 	background-color: initial;
 	color: white;
 }
+
