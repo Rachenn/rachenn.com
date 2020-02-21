@@ -1,9 +1,5 @@
 var express = require ("express");
 var app = express();
-// var AOS = require("aos");
-
-// import AOS from 'aos';
-// AOS.init();
 
 app.use(express.static(__dirname + '/public'));
 const port = process.env.PORT || 9000;
