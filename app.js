@@ -17,5 +17,9 @@ app.get("/mooncrystals", function(req, res){
   res.render('moonstone');
 });
 
+app.get("/maylandsmeadery", function(req, res){
+  res.render("maylandsmeadery");
+})
+
 app.listen(port);
 console.log("Server started at port " + port);
