@@ -21,12 +21,24 @@ var workSchema = new mongoose.Schema({
 	link: String
 });
 
-var test = new test ({
-    name: "Mrs Norris",
-    image: "google.com",
-    breed: "facebook.com"
+var work = mongoose.model("work", workSchema);
+
+var test = new work ({
+	name: "Mrs Norris",
+	image: "image.com",
+	link: "google.com"
 })
 
+test.save(function(err, work){
+	if(err){
+		console.log("MAYDAY");
+	}
+	else {
+		console.log("Cat saved!");
+		console.log(work);
+	}
+});
+////////////////////////////////////////////
 app.get("/", function(req, res){
   res.render('index');
   });
