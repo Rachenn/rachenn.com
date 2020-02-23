@@ -149,3 +149,12 @@ footer a:hover {
 	color: white;
 }
 
+#notfound {
+	color: red;
+	text-align: center;
+
+}
+
+#mia {
+	width: 50em;
+}

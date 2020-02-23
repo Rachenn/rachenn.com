@@ -14,31 +14,6 @@ app.use(express.static('styles'));
 app.use(express.static('script'));
 app.use(express.static("public"));
 
-// DATABASING
-var workSchema = new mongoose.Schema({
-	name: String,
-	image: String,
-	link: String
-});
-
-var work = mongoose.model("work", workSchema);
-
-var test = new work ({
-	name: "Mrs Norris",
-	image: "image.com",
-	link: "google.com"
-})
-
-test.save(function(err, work){
-	if(err){
-		console.log("MAYDAY");
-	}
-	else {
-		console.log("Cat saved!");
-		console.log(work);
-	}
-});
-////////////////////////////////////////////
 app.get("/", function(req, res){
   res.render('index');
   });
@@ -51,8 +26,9 @@ app.get("/maylandsmeadery", function(req, res){
   res.render("maylandsmeadery");
 })
 
-app.get("/*", function(req, res){
-  res.send("You lost?");
+app.get("/:word", function(req, res){
+  var word = req.params.word;
+  res.render("notfound", {word: word});
 })
 
 app.listen(port);
