@@ -6,10 +6,10 @@ app.use(express.static(__dirname + '/public'));
 
 app.post("/post", (req, res) => {
   console.log("Connected to React");
-  res.redirect("/reactdemo");
+  res.redirect("/");
 });
-
-const port = process.env.PORT || 8080;
+  
+const PORT = process.env.PORT || 8080;
 
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useNewUrlParser', true);
