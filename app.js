@@ -1,16 +1,13 @@
 var express = require ("express");
 var app = express();
-
-var port = 3000;
+var mongoose = require("mongoose");
 
 app.use(express.static(__dirname + '/public'));
+const port = process.env.PORT || 9000;
 
-app.post("/post", (req, res) => {
-  console.log("Connected to React");
-  res.redirect("/");
-});
-  
-const PORT = process.env.PORT || port;
+mongoose.set('useUnifiedTopology', true);
+mongoose.set('useNewUrlParser', true);
+mongoose.connect("mongodb://heroku_b1vf181k:57famg2vp6ge1v389b0fnc1dar@ds217548.mlab.com:17548/heroku_b1vf181k");
 
 app.set("view engine", "ejs");
 app.use(express.static('styles'));
@@ -27,15 +24,12 @@ app.get("/mooncrystals", function(req, res){
 
 app.get("/maylandsmeadery", function(req, res){
   res.render("maylandsmeadery");
-});
+})
 
-// Page not found
 app.get("/:word", function(req, res){
   var word = req.params.word;
   res.render("notfound", {word: word});
 })
-
-
 
 app.listen(port);
 console.log("Server started at port " + port);
