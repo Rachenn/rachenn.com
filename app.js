@@ -3,7 +3,13 @@ var app = express();
 var mongoose = require("mongoose");
 
 app.use(express.static(__dirname + '/public'));
-const port = process.env.PORT || 9000;
+
+app.post("/post", (req, res) => {
+  console.log("Connected to React");
+  res.redirect("/reactdemo");
+});
+
+const port = process.env.PORT || 8080;
 
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useNewUrlParser', true);
@@ -24,12 +30,23 @@ app.get("/mooncrystals", function(req, res){
 
 app.get("/maylandsmeadery", function(req, res){
   res.render("maylandsmeadery");
-})
+});
 
+// app.get("/reactdemo", function(req, res){
+//   // res.render("reactdemo/app");
+//   res.render("/");
+//   console.log("Connected to React");
+//   // res.redirect("/reactdemo");
+//   // res.sendFile(path.resolve(__dirname, '../reactdemo', 'app.js'));
+// });
+
+// Page not found
 app.get("/:word", function(req, res){
   var word = req.params.word;
   res.render("notfound", {word: word});
 })
+
+
 
 app.listen(port);
 console.log("Server started at port " + port);
