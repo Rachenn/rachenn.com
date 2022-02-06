@@ -1,6 +1,7 @@
 var express = require ("express");
 var app = express();
 var mongoose = require("mongoose");
+var port = 8080;
 
 app.use(express.static(__dirname + '/public'));
 
@@ -9,7 +10,7 @@ app.post("/post", (req, res) => {
   res.redirect("/");
 });
   
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || port;
 
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useNewUrlParser', true);
