@@ -21,7 +21,7 @@
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mongoose": "^5.9.2",
     "nodejs": "0.0.0",
     "path": "^0.12.7",
